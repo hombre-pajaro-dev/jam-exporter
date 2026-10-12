@@ -1,0 +1,22 @@
+[project]
+name = "music-scrapper"
+version = "0.1.0"
+description = "Find the Pieces in a jam Session, review them, and export the keepers for Moises."
+requires-python = ">=3.11"
+dependencies = ["numpy>=2"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+scrap = "scrap.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["scrap"]
+
+[tool.setuptools.package-data]
+scrap = ["review.html"]
